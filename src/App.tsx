@@ -1,3 +1,4 @@
+
 import { Icon } from "./assets/icons/Icon";
 import { Button } from "./components/Button";
 import { AuthInput, TextInput } from "./components/inputs";
@@ -16,7 +17,7 @@ function App() {
 
       <TextInput type="password" label="Full name" placeholder="Johndoe"  />
       <AuthInput type="password"  placeholder="Johndoe"  />
-      
+
     </div>
   );
 }
