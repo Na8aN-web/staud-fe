@@ -15,3 +15,19 @@ export interface ButtonProps {
   className?: string | any;
   onClick: () => void;
 }
+
+export interface Inputprops {
+  label: string;
+  labelFont?: string;
+  value?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  placeholder?: string;
+  type: "text" | "password" | "email" | "number"; 
+  errorLog?: string;
+}
+
+export interface CheckBoxProps  {
+height?: string | number ;
+width?: string | number ;
+
+}

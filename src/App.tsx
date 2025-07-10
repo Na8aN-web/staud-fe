@@ -1,24 +1,24 @@
 
-import { Icon } from "./assets/icons/Icon";
-import { Button } from "./components/Button";
-import { AuthInput, TextInput } from "./components/inputs";
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import { UserSignUp } from './auth/UserSignUp';
+import { UserSignIn } from './auth/UserSignIn';
+import { AgentSignUp } from './auth/AgentSignUp';
+import { AgentSignIn } from './auth/AgentSignIn';
 
 
 function App() {
   return (
-    <div className="p-12 text-red-500 bg-slate-800 h-screen">
-      <Button
-      onClick={()=> console.log('olajide')}
-        leftIcon={<Icon sort="location" />}
-        rightIcon={<Icon sort="location" />}
-        label="My button"
-        bgVariant="grey"
-      />
-
-      <TextInput type="password" label="Full name" placeholder="Johndoe"  />
-      <AuthInput type="password"  placeholder="Johndoe"  />
-
-    </div>
+    <>
+    <BrowserRouter>
+    <Routes>
+    <Route path='/' element={<UserSignUp/>} />
+    <Route path='usersign-up' element={<UserSignUp/>} />
+    <Route path='usersign-in' element={<UserSignIn/>} />
+    <Route path='agentsign-up' element={<AgentSignUp/>} />
+    <Route path='agentsign-in' element={<AgentSignIn/>} />
+    </Routes>
+    </BrowserRouter>
+    </>
   );
 }
 
