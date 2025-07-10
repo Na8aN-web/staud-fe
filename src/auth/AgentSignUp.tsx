@@ -73,22 +73,22 @@ export const AgentSignUp = () => {
             <div>
               <form action="" className="flex flex-col  gap-2">
                 <TextInput
-                  placeholder="johndoe"
+                  placeholder="Johndoe"
                   label="Full name"
                   type="text"
-                  onChange={(e) => e.target}
-                  value=""
+                  // onChange={(e) => e.target}
+                 
                 />
                 <TextInput
                   placeholder="johndoe@gmail.com"
-                  label="Full name"
-                  type="text"
+                  label="Email Address"
+                  type="email"
                   // onChange={()=> void }
-                  value=""
+                  
                 />
                 <AuthInput
                   label="Password"
-                  placeholder="enter password"
+                  placeholder="Enter password"
                   //  onChange={(e) => e.target}
                   type="password"
                   errorLog="Must be atleast 8 character"

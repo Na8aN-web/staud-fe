@@ -20,7 +20,7 @@ export const TextInput = ({
           type={type}
           value={value}
           onChange={onChange}
-          className="w-full h-full  px-3  rounded-lg bg-transparent text-white outline-none"
+          className="w-full h-full font-montserrat font-normal   px-3  rounded-lg bg-transparent text-white outline-none"
           placeholder={placeholder}
         />
       </div>
@@ -54,7 +54,7 @@ export const AuthInput = ({
           type={resolvedType}
           value={value}
           onChange={onChange}
-          className="w-full h-full px-3  rounded-lg bg-transparent text-white outline-none"
+          className="w-full h-full px-3 font-montserrat font-normal rounded-lg bg-transparent text-white outline-none"
           placeholder={placeholder}
         />
         <button type="button" onClick={handleToggle} className="px-3">

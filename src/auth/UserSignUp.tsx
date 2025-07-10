@@ -71,15 +71,15 @@ export const UserSignUp = () => {
                   placeholder="johndoe"
                   label="Full name"
                   type="text"
-                  onChange={(e) => e.target}
-                  value=""
+                  // onChange={(e) => e.target.value}
+                 
                 />
                 <TextInput
                   placeholder="johndoe@gmail.com"
-                  label="Full name"
+                  label="Email Address"
                   type="text"
                   // onChange={()=> void }
-                  value=""
+                 
                 />
                 <AuthInput
                   label="Password"
