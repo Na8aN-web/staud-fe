@@ -12,10 +12,15 @@ module.exports = {
         secondarycolor: '#0B407A',
         outline_grey: '#D9D9D9',
         labelColor: '#E8E8E8',
-        backgroundGrey: '#ECF1F4'
-      }
+        backgroundGrey: '#ECF1F4',
+        blurblue: '#52607093',
+        placeholder: '#8C9CAD'
+        
+
+      },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
+        inter: ['inter', 'sans-serif']
       },
     },
   },

@@ -1,13 +1,7 @@
 import { useState } from "react";
 import { Icon } from "../assets/icons/Icon";
-interface Inputprops {
-  label?: string;
-  labelFont?: string;
-  value?: string;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  placeholder: string;
-  type?: "text" | "password" | "email" | "number"; 
-}
+import { Inputprops } from "../types";
+
 export const TextInput = ({
   label,
   labelFont,
@@ -21,12 +15,12 @@ export const TextInput = ({
       <label className={`text-labelColor font-[400] ${labelFont || ""}`}>
         {label}
       </label>
-      <div className="border border-white rounded-lg h-10 flex px-3 items-center justify-center">
+      <div className="border border-white rounded-lg h-10 flex  items-center justify-center">
         <input
           type={type}
           value={value}
           onChange={onChange}
-          className="w-full h-full rounded-lg bg-transparent text-white outline-none"
+          className="w-full h-full font-montserrat font-normal   px-3  rounded-lg bg-transparent text-white outline-none"
           placeholder={placeholder}
         />
       </div>
@@ -43,6 +37,7 @@ export const AuthInput = ({
   onChange,
   placeholder ,
   type = "password",
+  errorLog,
 }: Inputprops) => {
   const [openPassword, setOpenPassword] = useState(false);
   const handleToggle = () => {
@@ -54,18 +49,19 @@ export const AuthInput = ({
       <label className={`text-labelColor font-[400] ${labelFont || ""}`}>
         {label}
       </label>
-      <div className="border border-white rounded-lg h-10 flex px-3 items-center justify-between">
+      <div className="border border-white rounded-lg h-10 flex items-center justify-between">
         <input
           type={resolvedType}
           value={value}
           onChange={onChange}
-          className="w-full h-full rounded-lg bg-transparent text-white outline-none"
+          className="w-full h-full px-3 font-montserrat font-normal rounded-lg bg-transparent text-white outline-none"
           placeholder={placeholder}
         />
-        <button type="button" onClick={handleToggle}>
+        <button type="button" onClick={handleToggle} className="px-3">
           <Icon sort={openPassword ? "openEye" : "hiddenEye"} />
         </button>
       </div>
+      <p className="text-[14px] font-thin">{errorLog}</p>
     </div>
   );
 };

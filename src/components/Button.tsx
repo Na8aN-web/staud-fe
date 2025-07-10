@@ -16,7 +16,7 @@ export const Button = ({
     <div className="">
       <button
        onClick={onClick}
-        className={`flex items-center gap-2 justify-center px-5 py-2 rounded-lg outline-none hover:bg-opacity-90 duration-500 transition-all ${className}
+        className={`flex font-inter items-center gap-2 justify-center px-5 py-2 rounded-lg outline-none hover:bg-opacity-90 duration-500 transition-all ${className}
       ${
         bgVariant === "primary"
           ? "bg-primarycolor text-white"
